@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LSS Easter Egg Clicker
 // @namespace    www.leitstellenspiel.de
-// @version      1.6
+// @version      1.7
 // @description  Automatically click the Easter Egg link when an Easter Egg is detected
 // @author       Afilia
 // @match        https://www.leitstellenspiel.de/missions/*
@@ -71,6 +71,9 @@
             easterEggLink.click();
         } else if (imageSrc.includes('heart')) {
             // For Hearts, automatically click the Easter Egg Link
+            easterEggLink.click();
+        } else if (imageSrc.includes('winter_item')){
+            // For Winter Items, automatically click the Easter Egg Link
             easterEggLink.click();
         }
     }
