@@ -31,7 +31,7 @@
 
     async function fetchVersionData() {
         try {
-            const response = await fetch ('https://afiliaassela.github.io/EasterEggClicker/version.json');
+            const response = await fetch ('https://yuhiamatsume.github.io/EasterEggClicker/version.json');
             return await response.json();
         } catch (error) {
             console.error('Error fetching version data:', error);
