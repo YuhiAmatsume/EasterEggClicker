@@ -3,7 +3,7 @@
 // @namespace    www.leitstellenspiel.de
 // @version      1.7
 // @description  Automatically click the Easter Egg link when an Easter Egg is detected
-// @author       Afilia
+// @author       YuhiAmatsume
 // @match        https://www.leitstellenspiel.de/missions/*
 // @grant        none
 // ==/UserScript==
@@ -47,13 +47,13 @@
             window.location.href = versionData.updateURL;
         }
     }
-    // Prüfe, ob das Element mit der ID "easter-egg-link" vorhanden ist
+    // Check for Element with ID "easter-egg-link"
     var easterEggLink = document.getElementById('easter-egg-link');
 
     if (easterEggLink) {
         var imageSrc = easterEggLink.querySelector('img').getAttribute('src');
 
-        // Prüfe, ob der Bild-Quelltext das Wort "Pumpkin" enthält
+        // Checks for different seasonal "Easteregg" Collectables.
         if (imageSrc.includes('pumpkin')) {
             // For Pumpkin, automatically click the Easter Egg link
             easterEggLink.click();
